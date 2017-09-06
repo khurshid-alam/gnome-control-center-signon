@@ -1,0 +1,8 @@
+usr/bin/online-accounts-preferences
+usr/bin/credentials-preferences
+usr/lib/*/update-accounts
+usr/lib/*/unity-control-center-1/panels/*.so
+usr/share/applications
+usr/share/dbus-1/services/com.canonical.webcredentials.capture.service
+usr/share/help
+usr/share/icons

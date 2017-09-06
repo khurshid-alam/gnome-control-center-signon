@@ -1,0 +1,11 @@
+--- a/src/cc-credentials-accounts-model.vala
++++ b/src/cc-credentials-accounts-model.vala
+@@ -375,7 +375,7 @@
+         Gtk.TreeIter iter;
+         if (find_iter_for_account_id (account_id, out iter))
+         {
+-            this.remove (iter);
++            this.remove (ref iter);
+         }
+         else
+         {

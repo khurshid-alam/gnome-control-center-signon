@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DPKG_GENSYMBOLS_CHECK_LEVEL = 4
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-gtk-doc --libdir=/usr/lib
+
+override_dh_install:
+	cd tests/autopilot && \
+	python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb
+	mkdir -p debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)
+	mv debian/tmp/usr/lib/lib*a debian/tmp/usr/lib/lib*.so* \
+	    debian/tmp/usr/lib/girepository-1.0 debian/tmp/usr/lib/pkgconfig \
+		debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)
+
+	dh_install --fail-missing -X.la
+
+override_dh_autoreconf:
+	NOCONFIGURE=1 dh_autoreconf ./autogen.sh
+
+%:
+	dh $@ --with autoreconf,python2

@@ -1,0 +1,10 @@
+data/credentials-preferences.desktop.in
+data/unity-credentials-panel.desktop.in
+src/cc-credentials-account-details-page.c
+src/cc-credentials-accounts-model.c
+src/cc-credentials-accounts-page.c
+src/cc-credentials-application.c
+src/cc-credentials-applications-model.c
+src/cc-credentials-authorization-page.c
+src/cc-credentials-providers-model.c
+src/cc-credentials-providers-page.c

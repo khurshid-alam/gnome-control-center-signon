@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Account update tool
+Exec=@LIBEXECDIR@/update-accounts
+NoDisplay=true
+Type=Application

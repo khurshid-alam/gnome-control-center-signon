@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<provider id="MyProvider">
+  <name>My Provider</name>
+  <icon>general_myprovider</icon>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth2</setting>
+      <setting name="mechanism">user_agent</setting>
+      <group name="oauth2/user_agent">
+        <setting name="long">very long</setting>
+        <setting name="medium">like this</setting>
+      </group>
+    </group>
+  </template>
+</provider>

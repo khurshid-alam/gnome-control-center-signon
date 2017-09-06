@@ -1,0 +1,102 @@
+Source: gnome-control-center-signon
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Build-Depends: autotools-dev,
+               dbus-test-runner,
+               debhelper (>= 9),
+               dh-autoreconf,
+               gir1.2-glib-2.0,
+               gnome-common,
+               gobject-introspection,
+               gtk-doc-tools,
+               libaccounts-glib-dev (>= 1.10),
+               libgirepository1.0-dev (>= 0.10),
+               libgtk-3-dev,
+               libsignon-glib-dev (>= 1.8),
+               libunity-control-center-dev,
+               pkg-config,
+               python,
+               python-distutils-extra,
+               signond-dev,
+               valac (>= 0.16),
+               xvfb,
+               yelp-tools,
+Standards-Version: 3.9.8
+Homepage: https://launchpad.net/online-accounts-gnome-control-center
+# If you aren't a member of ~online-accounts but need to upload packaging changes,
+# just go ahead.  ~online-accounts will notice and sync up the code again.
+Vcs-Bzr: https://code.launchpad.net/~online-accounts/gnome-control-center-signon/trunk
+
+Package: unity-control-center-signon
+Architecture: any
+Depends: unity-control-center,
+         libaccount-plugin-1.0-0 (= ${binary:Version}),
+         libaccount-plugin-generic-oauth, 
+         libaccount-plugin-google,
+         signon-keyring-extension,
+         signon-ui-x11,
+         signond,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Conflicts: gnome-control-center-signon
+Replaces: gnome-control-center-signon
+Description: Unity Control Center extension for single signon
+ Unity Control Center extension for single signon
+
+Package: libaccount-plugin-1.0-0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         signond
+Recommends: unity-control-center-signon
+Description: libaccount-plugin for Unity Control Center
+ Unity Control Center library for libaccounts
+
+Package: libaccount-plugin-1.0-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: gir1.2-accountplugin-1.0,
+         libaccount-plugin-1.0-0 (= ${binary:Version}),
+         libglib2.0-dev,
+         libgtk-3-dev,
+         libaccounts-glib-dev (>= 1.7),
+         libsignon-glib-dev (>= 1.8),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: libaccount-plugin for Unity Control Center - devel
+ Unity Control Center library for libaccounts - devel
+
+Package: gir1.2-accountplugin-1.0
+Section: introspection
+Architecture: any
+Multi-Arch: same
+Depends: libaccount-plugin-1.0-0 (= ${binary:Version}),
+         ${gir:Depends},
+         ${misc:Depends},
+Description: typelib file for libaccount-plugin-1.0-0
+ .
+ This package can be used by other packages using the GIRepository format to
+ generate dynamic bindings for libaccount-plugin-1.0-0
+
+Package: libaccount-plugin-1.0-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: libaccount-plugin for Unity Control Center - Developer Docs
+ .
+ This package provides the developer documentation for the libaccount-plugin
+ library.
+
+Package: unity-control-center-signon-autopilot
+Architecture: all
+Depends: autopilot-desktop (>= 1.4),
+         unity-control-center-signon (= ${source:Version}),
+         uoa-integration-tests,
+         ${misc:Depends},
+Description: Test package for Ubuntu Online Accounts - Desktop
+ Autopilot tests for Ubuntu Online Accounts - Desktop

@@ -1,0 +1,553 @@
+gnome-control-center-signon (0.1.9+16.10.20160825-0yunit0+debian+9) unstable; urgency=medium
+
+  [ John Salatas ]
+  * renamed for yunit
+
+ -- John Salatas <jsalatas@gmail.com>  Fri, 02 Jun 2017 01:49:00 +0700
+
+gnome-control-center-signon (0.1.9+16.10.20160825-0ubuntu1) yakkety; urgency=medium
+
+  * Update deb standards
+
+ -- Alberto Mardegan <mardy@users.sourceforge.net>  Thu, 25 Aug 2016 07:56:13 +0000
+
+gnome-control-center-signon (0.1.9+16.04.20160405-0ubuntu1) xenial; urgency=medium
+
+  [ Alberto Mardegan ]
+  * Allow plugins to retrieve username (LP: #1565772)
+  * debian/libaccount-plugin-1.0-0.symbols
+    - new symbols
+
+  [ CI Train Bot ]
+  * No-change rebuild.
+
+ -- David Barth <david.barth@canonical.com>  Tue, 05 Apr 2016 12:57:57 +0000
+
+gnome-control-center-signon (0.1.8+16.04.20160201-0ubuntu1) xenial; urgency=medium
+
+  [ CI Train Bot ]
+  * No-change rebuild.
+
+ -- Łukasz Zemczak <ci-train-bot@canonical.com>  Mon, 01 Feb 2016 12:38:02 +0000
+
+gnome-control-center-signon (0.1.8+16.04.20151208-0ubuntu2) xenial; urgency=medium
+
+  * Multiarchify the library packages.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 28 Jan 2016 21:26:36 +0100
+
+gnome-control-center-signon (0.1.8+16.04.20151208-0ubuntu1) xenial; urgency=medium
+
+  [ Alberto Mardegan ]
+  * On account creation, filter out providers without valid plugins from the
+    providers list (LP: #1287640)
+
+  [ CI Train Bot ]
+  * No-change rebuild.
+
+ -- David Barth <david.barth@canonical.com>  Tue, 08 Dec 2015 13:59:09 +0000
+
+gnome-control-center-signon (0.1.7~+14.10.20140814-0ubuntu1) utopic; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Alberto Mardegan ]
+  * Add explicit dependency on signon-ui-x11 Now that signon-ui is a
+    dummy package for signon-ui-x11 and ubuntu-system-settings-online-
+    accounts, we must make sure that the former is installed, since it's
+    the only possibility which provides all the functionalities required
+    by the unity-control-center.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 14 Aug 2014 10:20:07 +0000
+
+gnome-control-center-signon (0.1.7~+14.04.20140211.2-0ubuntu4) trusty; urgency=medium
+
+  * Build on Architecture:any, as we should have qt5 everywhere now.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Sun, 16 Mar 2014 01:29:05 +0000
+
+gnome-control-center-signon (0.1.7~+14.04.20140211.2-0ubuntu3) trusty; urgency=medium
+
+  * debian/control: drop qtdeclarative5-dev forced depwaiting hack, go back
+    to listing archs instead, arm64 used to build but doesn't have qt5, 
+    so the workaround used doesn't seem to be correct, that should unblock
+    e.g empathy to move to trusty
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 25 Feb 2014 13:46:02 +0100
+
+gnome-control-center-signon (0.1.7~+14.04.20140211.2-0ubuntu2) trusty; urgency=medium
+
+  * debian/control: 
+    - don't limit the list of archs, build as arch any but build-depends on
+      qtdeclarative5-dev instead to force a depwait on the archictures where
+      qt5 is not available yet
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 12 Feb 2014 19:28:22 +0100
+
+gnome-control-center-signon (0.1.7~+14.04.20140211.2-0ubuntu1) trusty; urgency=low
+
+  [ Robert Ancell ]
+  * Use unity-control-center instead of gnome-control-center
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 174
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Feb 2014 19:29:11 +0000
+
+gnome-control-center-signon (0.1.7~+14.04.20131126.2-0ubuntu2) trusty; urgency=medium
+
+  * Build for all architectures.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 11 Feb 2014 16:51:18 +0100
+
+gnome-control-center-signon (0.1.7~+14.04.20131126.2-0ubuntu1) trusty; urgency=low
+
+  [ Ken VanDine ]
+  * Added depends for signon-keyring-extension, this is only needed by
+    plugins that use gnome-control-center-signon.
+
+  [ Alberto Mardegan ]
+  * Move to autopilot 1.4. (LP: #1248618)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 171
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Nov 2013 19:09:04 +0000
+
+gnome-control-center-signon (0.1.7~+13.10.20130724.1-0ubuntu1) saucy; urgency=low
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Remove the leftover rm, fix style.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 168
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 24 Jul 2013 06:09:39 +0000
+
+gnome-control-center-signon (0.1.7~+13.10.20130723-0ubuntu1) saucy; urgency=low
+
+  [ Jeremy Bicha ]
+  * fix build with Saucy's multi-arched gnome-control-center.
+  * Fix built-in help link in System Settings (LP: #857637). (LP:
+    #857637)
+  * Don't build-depend on gnome-doc-utils.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 166
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 23 Jul 2013 04:32:09 +0000
+
+gnome-control-center-signon (0.1.7~+13.10.20130625-0ubuntu1) saucy; urgency=low
+
+  [ Didier Roche ]
+  * don't build on powerpc as the new Qt5-based version don't have
+    powerpc qtscripts.
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Bump the dbus-test-runner timout 2x, as armhf can be really slow.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 162
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 25 Jun 2013 15:41:02 +0000
+
+gnome-control-center-signon (0.1.7~daily13.06.18-0ubuntu1) saucy; urgency=low
+
+  [ Jeremy Bicha ]
+  * Have libaccount-plugin-1.0-0 depend on signond (LP: #1191522). (LP:
+    #1191522)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 158
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 18 Jun 2013 04:31:22 +0000
+
+gnome-control-center-signon (0.1.7~daily13.06.05.1-0ubuntu2) UNRELEASED; urgency=low
+
+  * Add help page for signon-ui's HTTP security warning.
+
+ -- Alberto Mardegan <alberto.mardegan@canonical.com>  Mon, 17 Jun 2013 04:15:00 -0700
+
+gnome-control-center-signon (0.1.7~daily13.06.05.1-0ubuntu1) saucy; urgency=low
+
+  [ Ken VanDine ]
+  * Disable GNOME_COMPILE_WARNINGS([maximum]) to get it building in saucy, 
+    I've filed bug #1187505 to track fixing those warnings.
+
+  [ Jeremy Bicha ]
+   * debian/control:
+     - Depend on valac (>= 0.16) instead of valac-0.16 for easier transitions
+
+  [ Gabor Kelemen ]
+  * Include gi18n-lib.h to make translated strings really appear. (LP:
+    #1176506)
+
+  [ David King ]
+  * Show the preferences panel in all desktop environments. (LP:
+    #1070546)
+  * Avoid some warnings.
+
+  [ Alberto Mardegan ]
+  * OAuthPlugin: do not require mechanism or parameters They can all be
+    read from the .provider files. .
+  * Update NEWS.
+  * Don't crash when cancelling the authentication or disposing the
+    plugin This fixes a couple of crashes which would occur: 1) when
+    cancelling an ongoing authentication by pressing the "Cancel"
+    button: this is fixed by tracking the state of the asynchronous
+    operations and delaying the emission of the "finished" signal until
+    they have all completed. 2) when going back to the System Settings:
+    this operation would destroy the plugin, but the asynchronous
+    operations would still continue and the callbacks would be invoked
+    later on an invalid pointer to "self" (see also
+    https://bugzilla.gnome.org/show_bug.cgi?id=696369). This is fixed by
+    guarding the "self" pointer with a weak GObject pointer. (LP:
+    #1122520)
+  * Use latest libaccounts-glib And a few other changes to let the
+    package build successfully with the newest G* stuff.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 156
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 05 Jun 2013 18:49:10 +0000
+
+gnome-control-center-signon (0.1.6bzr13.04.05daily13.05.14ubuntu.unity.next-0ubuntu1) raring; urgency=low
+
+  [ Ken VanDine ]
+  * debian/control
+    - Depend on libaccount-plugin-generic-oauth and libaccount-plugin-google
+  * Added autopilot test package
+
+  [ Alberto Mardegan ]
+  * Don't report account failures. Failures should be reported by clients or
+    by signon-ui.
+
+  [ Gabor Kelemen ]
+  * Include gi18n-lib.h to make translated strings really appear. (LP:
+    #1176506)
+
+  [ David King ]
+  * Show the preferences panel in all desktop environments. (LP:
+    #1070546)
+  * Avoid some warnings.
+
+  [ Alberto Mardegan ]
+  * OAuthPlugin: do not require mechanism or parameters They can all be
+    read from the .provider files. .
+  * Update NEWS.
+  * Don't crash when cancelling the authentication or disposing the
+    plugin This fixes a couple of crashes which would occur: 1) when
+    cancelling an ongoing authentication by pressing the "Cancel"
+    button: this is fixed by tracking the state of the asynchronous
+    operations and delaying the emission of the "finished" signal until
+    they have all completed. 2) when going back to the System Settings:
+    this operation would destroy the plugin, but the asynchronous
+    operations would still continue and the callbacks would be invoked
+    later on an invalid pointer to "self" (see also
+    https://bugzilla.gnome.org/show_bug.cgi?id=696369). This is fixed by
+    guarding the "self" pointer with a weak GObject pointer. (LP:
+    #1122520)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 151 (ubuntu-unity/next)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 14 May 2013 19:18:57 +0000
+
+gnome-control-center-signon (0.1.6bzr13.04.05-0ubuntu2) saucy; urgency=low
+
+  * libaccount-plugin/oauth-plugin.c: backport fix from trunk for strings
+    not displaying translated (lp: #1176506)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 13 May 2013 11:52:53 +0200
+
+gnome-control-center-signon (0.1.6bzr13.04.05-0ubuntu1) raring; urgency=low
+
+  * Don't show the credentials-preferences launcher in Unity, this keeps 
+    Online Accounts from appearing twice in the applications lens
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 05 Apr 2013 11:29:05 -0400
+
+gnome-control-center-signon (0.1.5-0ubuntu1) raring; urgency=low
+
+  * New upstream release.
+    - OAuthPlugin: don't crash when cancelling the authentication or disposing
+      the plugin (LP: #1122520)
+
+ -- Alberto Mardegan <alberto.mardegan@canonical.com>  Mon, 25 Mar 2013 11:00:59 +0200
+
+gnome-control-center-signon (0.1.4-0ubuntu1) raring; urgency=low
+
+  [ Rico Tzschichholz ]
+  * Fix dev-package dependencies
+
+  [ Alberto Mardegan ]
+  * New upstream release.
+    - OAuthPlugin: do not require mechanism or parameters.
+    - Show the preferences panel in all desktop environments (LP: #1070546)
+
+ -- Alberto Mardegan <alberto.mardegan@canonical.com>  Thu, 21 Mar 2013 16:06:49 +0200
+
+gnome-control-center-signon (0.1.3bzr13.02.20-0ubuntu1) raring; urgency=low
+
+  [ Didier Roche ]
+  * modernize build to confirm to other packages we have
+
+  [ Ken VanDine ]
+  * Automatic snapshot from revision 135 (bootstrap)
+  * Add switches for toogling enabled state of application 
+    services (LP: #1044055)
+  * Fix D-Bus service file substitution (LP: #1066917)
+  * Allow the preferences panel to be built as a standalone 
+    application (LP: #1078642)
+  * Read provider settings from .provider XML files
+  * Enable tests during package build
+  * Test improvements for libaccount-plugin
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 18 Mar 2013 11:35:16 -0400
+
+gnome-control-center-signon (0.1.2bzr12.12.05-0ubuntu1) raring; urgency=low
+
+  [ Robert Bruce Park ]
+  * Inlined packaging data.
+  * -debian/patches/fix_exec_path.patch
+
+  [ Ken VanDine ]
+  * New upstream snapshot
+    - Add LXDE to control-center panel desktop file (LP: #1070546)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 05 Dec 2012 10:48:53 -0500
+
+gnome-control-center-signon (0.1.1-0ubuntu1) raring; urgency=low
+
+  * New upstream release.
+    - Containers for account toggle switch and list header are rendered
+      poorly in themes other than Ambiance / Radiance (LP: #1040186)
+    - Control center panel should be optional (LP: #1070729)
+    - List corners are square for "Add account" rounded otherwise (LP: #1043714)
+    - Grey box around "Show accounts that integrate..." is noise (LP: #1043729)
+    - Remove account button should be title case (LP: #1059376)
+  * -debian/patches/revert_string_change.patch
+  * debian/patches/fix_exec_path.patch
+    - fixed path in dbus service file
+  * debian/control, debian/rules
+    - added autoreconf
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 13 Nov 2012 15:36:09 -0500
+
+gnome-control-center-signon (0.0.20-0ubuntu1) raring; urgency=low
+
+  * New upstream release.
+    - Fix the passing of cookies to signon-ui (LP: #1066917)
+  * debian/control
+    - removed unneeded build depends for libdbus-glib-1-dev
+    - build depend on libsignon-glib-dev >= 1.7 to get fix for (LP: #1066917)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 08 Nov 2012 12:43:17 -0500
+
+gnome-control-center-signon (0.0.18-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+    - [UIFe] Add legal notice buttons to UI (LP: #1056718)
+  * debian/patches/revert_string_change.patch
+    - revert dropping of a period unrelated to the above UIFe
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 28 Sep 2012 16:56:22 -0400
+
+gnome-control-center-signon (0.0.17-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+    - Handle translated .application files (LP: #1052375)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 19 Sep 2012 12:21:28 -0400
+
+gnome-control-center-signon (0.0.15-0ubuntu2) quantal; urgency=low
+
+  * debian/control
+    - removed clutter build depends
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 13 Sep 2012 14:04:32 -0400
+
+gnome-control-center-signon (0.0.15-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+    - OAuthPlugin: update authentication parameters on
+      re-authentication (LP: #1047191)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 10 Sep 2012 09:13:51 -0400
+
+gnome-control-center-signon (0.0.14-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+    - removed the clutter based transition, it broke the scrollbar and was
+      inconsistent with the other panels (LP: #1043697) (LP: #1043732)
+    - Selection style in account type list is inconsistent with the rest
+      of Ubuntu (LP: #1043724)
+  * debian/control
+    - removed clutter build depends
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 07 Sep 2012 16:46:35 -0400
+
+gnome-control-center-signon (0.0.13-0ubuntu1) quantal-proposed; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - added libclutter-gtk-1.0-dev and libclutter-1.0-dev to build depends
+    - depend on gnome-control-center >= 3.4.2-0ubuntu10, which includes
+      the clutter init patch
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 23 Aug 2012 16:22:45 -0400
+
+gnome-control-center-signon (0.0.12-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 02 Aug 2012 09:39:14 -0400
+
+gnome-control-center-signon (0.0.11-0quantal1) quantal; urgency=low
+
+  * New upstream release.
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 01 Aug 2012 10:33:52 -0400
+
+gnome-control-center-signon (0.0.10-0quantal1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 31 Jul 2012 16:33:20 -0400
+
+gnome-control-center-signon (0.0.9+r86-0quantal1) quantal; urgency=low
+
+  * merged from tag 0.0.9+bzr86
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 20 Jul 2012 11:39:57 -0400
+
+gnome-control-center-signon (0.0.9-0quantal1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 17 Jul 2012 11:20:56 -0400
+
+gnome-control-center-signon (0.0.8+r79-0quantal2) quantal; urgency=low
+
+  * debian/control
+    - build with valac-0.18
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 16 Jul 2012 14:44:35 -0400
+
+gnome-control-center-signon (0.0.8+r79-0quantal1) quantal; urgency=low
+
+  * rebuild for quantal
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 16 Jul 2012 10:26:36 -0400
+
+gnome-control-center-signon (0.0.8+r79-0precise1) precise; urgency=low
+
+  * merged from tag 0.0.8+bzr79
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 11 Jul 2012 10:31:44 -0400
+
+gnome-control-center-signon (0.0.7+r76-0precise1) precise; urgency=low
+
+  * merged from tag 0.0.7+bzr76
+
+ -- David King <david.king@canonical.com>  Wed, 04 Jul 2012 07:52:00 +0100
+
+gnome-control-center-signon (0.0.6+r73-0precise2) precise; urgency=low
+
+  * no change rebuild
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 15 Jun 2012 16:46:50 -0400
+
+gnome-control-center-signon (0.0.6+r73-0precise1) precise; urgency=low
+
+  * Merged latest trunk at revision 73
+  * debian/libaccount-plugin-1.0-0.symbols
+    - new symbols
+  * debian/control
+    - bump build depends for libaccounts-glib-dev to >= 1.1+bzr155
+    - libaccount-plugin-1.0 recommends gnome-control-center-signon
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 14 Jun 2012 16:03:18 -0400
+
+gnome-control-center-signon (0.0.5+r68-0precise1) precise; urgency=low
+
+  * merged from tag 0.0.5+bzr68
+  * debian/control
+    - Added libdbus-glib-1-dev build dep
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 01 Jun 2012 14:43:35 -0400
+
+gnome-control-center-signon (0.0.4+r65-0precise1) precise; urgency=low
+
+  * merged from tag 0.0.4+bzr65
+  * debian/control, debian/libaccount-plugin-1.0-doc.install
+    - added gtk-doc docs libaccount-plugin-1.0-doc
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 29 May 2012 11:27:44 -0400
+
+gnome-control-center-signon (0.0.2+r57-0precise1) precise; urgency=low
+
+  * merged from tag 0.0.2+bzr57
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 22 May 2012 15:38:20 -0400
+
+gnome-control-center-signon (0.0.2+r56-0precise1) precise; urgency=low
+
+  * Merged from trunk r56
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 17 May 2012 14:01:13 -0400
+
+gnome-control-center-signon (0.0.2+r55-0precise1) precise; urgency=low
+
+  * debian/rules
+    - disable tests again
+  * merged from tag 0.0.2+bzr55
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 04 May 2012 15:50:57 -0700
+
+gnome-control-center-signon (0.0.1+r27-0precise6) precise; urgency=low
+
+  * debian/control, debian/rules
+    - added gnome-control-center-signon-dbg package
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 27 Mar 2012 09:10:54 -0400
+
+gnome-control-center-signon (0.0.1+r27-0precise5) precise; urgency=low
+
+  * debian/control
+    - added build depends to generate documentation
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 26 Mar 2012 16:48:22 -0400
+
+gnome-control-center-signon (0.0.1+r27-0precise4) precise; urgency=low
+
+  * debian/control, debian/rules
+    - added -dbg package
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 26 Mar 2012 16:19:01 -0400
+
+gnome-control-center-signon (0.0.1+r27-0precise3) precise; urgency=low
+
+  * debian/control
+    - make libaccount-plugin-1.0-dev depend on libgtk-3-dev
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 16 Mar 2012 15:18:22 -0400
+
+gnome-control-center-signon (0.0.1+r27-0precise2) precise; urgency=low
+
+  * fixed soname in symbols
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 16 Mar 2012 12:37:03 -0400
+
+gnome-control-center-signon (0.0.1+r27-0precise1) precise; urgency=low
+
+  * New snapshot
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 16 Mar 2012 11:58:54 -0400
+
+gnome-control-center-signon (0.0.1+r20-0precise1) precise; urgency=low
+
+  * Initial package
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 06 Jan 2012 11:54:51 -0500

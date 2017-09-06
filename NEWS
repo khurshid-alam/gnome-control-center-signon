@@ -1,0 +1,166 @@
+UOA GNOME Control Center panel NEWS
+
+Version 0.1.5
+-------------
+* OAuthPlugin: don't crash when cancelling the authentication or disposing
+  the plugin.
+  Fixes: https://bugs.launchpad.net/bugs/1122520
+
+Version 0.1.4
+-------------
+
+* OAuthPlugin: do not require mechanism or parameters
+* Show the preferences panel in all desktop environments
+  https://bugs.launchpad.net/bugs/1070546.
+
+Version 0.1.3
+-------------
+
+* Add switches for toogling enabled state of application services
+  https://launchpad.net/bugs/1044055
+* Fix D-Bus service file substitution
+  https://launchpad.net/bugs/1066917
+* Allow the preferences panel to be built as a standalone application
+  https://launchpad.net/bugs/1078642
+* Use new ReauthenticateAccount D-Bus API for reauthenticating
+* Read provider settings from .provider XML files
+* Enable tests during package build
+* Test improvements for libaccount-plugin
+
+Version 0.1.1
+-------------
+
+* Make control center panel optional during configure
+  https://launchpad.net/bugs/1070729
+* Add style class to scrolled window and frame in account details view
+  https://launchpad.net/bugs/1043714
+* Remove InfoBar from ProvidersPage
+  https://launchpad.net/bugs/1043729
+* Replace InfoBar with Grid in AccountDetailsPage
+  https://launchpad.net/bugs/1040186
+* Capitalize every word for buttons in account details view
+  https://launchpad.net/bugs/1059376
+* Update ChangeLog, NEWS and README
+
+Version 0.0.20
+--------------
+
+* Fix the passing of cookies to signon-ui:
+  https://launchpad.net/bugs/1066917
+
+Version 0.0.19
+--------------
+
+* Add new accounts to the end of the account list:
+  https://launchpad.net/bugs/1054722
+
+Version 0.0.18
+--------------
+
+* Add legal notice buttons to UI:
+  https://launchpad.net/bugs/1056718
+
+Version 0.0.17
+--------------
+
+* Support localization of application descriptions:
+  https://launchpad.net/bugs/1052375
+
+Version 0.0.16
+--------------
+
+* Only show ‘Grant access’ button when necessary:
+  https://launchpad.net/bugs/1045747
+* Correctly display applications without desktop files:
+  https://launchpad.net/bugs/1043695
+  https://launchpad.net/bugs/1045866
+
+Version 0.0.15
+--------------
+
+* Update OAuth plugin authentication parameters on reauthentication:
+  https://launchpad.net/bugs/1047191
+
+Version 0.0.14
+--------------
+
+* Avoid warning when deleting an account:
+  https://launchpad.net/bugs/1026134
+* Do not animate the panel transition:
+  https://launchpad.net/bugs/1043697
+* Fix some failing tests and compiler warnings
+
+Version 0.0.13
+--------------
+
+* Add button for editing account options for non-OAuth accounts:
+  https://launchpad.net/bugs/1028354
+
+Version 0.0.12
+--------------
+
+* Distribute COPYING.LGPL
+
+Version 0.0.11
+--------------
+
+* Distribute autogen.sh
+
+Version 0.0.10
+--------------
+
+* Add GNU LGPL version 3 as COPYING.LGPL
+* Display an error message if g_module_open() failed
+
+Version 0.0.9
+-------------
+
+* Make ‘All accounts’ the default option in provider combo box:
+  https://launchpad.net/bugs/1025585
+* Create headless accounts in disabled state:
+  https://launchpad.net/bugs/1025303
+* Handle no consumer applications being present for an account
+
+Version 0.0.8
+-------------
+
+* Enable newly-installed services automatically:
+  https://launchpad.net/bugs/1020060
+* Change name and refresh icons
+
+Version 0.0.7
+-------------
+
+* Add some UI tweaks and adjust some widget colors
+* Highlight provider rows in the new account tree view
+* Use a translucent provider icon when the account is disabled or needs
+  attention
+
+Version 0.0.6
+-------------
+
+* Add support for OAuth 1.0a
+* Allow account plugins to ignore the provided cookies
+
+Version 0.0.5
+-------------
+
+* Implement the login capture D-Bus service
+
+Version 0.0.4
+-------------
+
+* Build gtk-doc documentation during make all
+
+Version 0.0.3
+-------------
+
+* Add ApplicationPlugin base class and tests
+* Add API for headless (non-UI) creation of accounts
+* Show per-application account options if the plugin exists
+* Add gtk-doc reference to libaccount-plugin
+
+Version 0.0.2
+-------------
+
+* Initial release

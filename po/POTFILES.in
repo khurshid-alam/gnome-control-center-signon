@@ -1,0 +1,11 @@
+data/credentials-preferences.desktop.in.in
+data/unity-credentials-panel.desktop.in.in
+src/cc-credentials-account-details-page.vala
+src/cc-credentials-accounts-model.vala
+src/cc-credentials-accounts-page.vala
+src/cc-credentials-application.vala
+src/cc-credentials-applications-model.vala
+src/cc-credentials-authorization-page.vala
+src/cc-credentials-providers-model.vala
+src/cc-credentials-providers-page.vala
+libaccount-plugin/oauth-plugin.c
